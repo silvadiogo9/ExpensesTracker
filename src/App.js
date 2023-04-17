@@ -1,9 +1,7 @@
-import Expenses from "./components/Expenses";
+import React from "react";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
-  // const parag = document.createElement('p');
-  // parag.textContent = 'This is also visible';
-  // document.getElementById('root').append(parag);
   const expenses = [
     {
       id: 'e1',
@@ -29,12 +27,26 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      <Expenses items={expenses}/>
+      <Expenses items={expenses} />
     </div>
   );
 }
 
 export default App;
 
+// const parag = document.createElement('p');
+// parag.textContent = 'This is also visible';
+// document.getElementById('root').append(parag);
 
-// return <ExpenseItem />;
+// another way to creat functions
+// const App = () => {
+
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, 'Let\'s get started!'),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+  
+  // return <ExpenseItem />;
+// }
